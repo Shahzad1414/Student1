@@ -41,5 +41,5 @@ function show(data) {
         }
     }
     // Setting innerHTML as tab variable
-    document.getElementById("employees").innerHTML = tab;
+    document.getElementById("Tbl").innerHTML = tab;
 }
