@@ -8,7 +8,7 @@ $(document).ready(function() {
         .then(res => res.json())
         .then((out) => {
             $("#content_1 #View4Tbl").empty();
-            $("#heading").text("latest 20 Measurements Types");
+            $("#heading").text("latest 50 Measurements Types");
             let tab =
                 `<tr>
           <th>Row_Number</th>
@@ -23,7 +23,7 @@ $(document).ready(function() {
             for (let r of out) {
 
                 count = count + 1;
-                if (count <= 20) {
+                if (count <= 50) {
                     tab += `<tr> 
                     <td>${count} </td>
                     <td>${r.date_time.slice(0,10)}</td> 
@@ -68,7 +68,7 @@ $(document).ready(function() {
                 .then(res => res.json())
                 .then((out) => {
                     $("#content_1 #View4Tbl").empty();
-                    $("#heading").text("latest 20 measurements Types");
+                    $("#heading").text("latest 50 measurements Types");
                     let tab =
                         `<tr>
               <th>Row_Number</th>
@@ -83,7 +83,7 @@ $(document).ready(function() {
                     for (let r of out) {
 
                         count = count + 1;
-                        if (count <= 20) {
+                        if (count <= 50) {
                             tab += `<tr> 
                         <td>${count} </td>
                         <td>${r.date_time.slice(0,10)}</td> 
@@ -141,8 +141,7 @@ $(document).ready(function() {
                     for (let r of out) {
 
                         count = count + 1;
-                        if (count <= 50) {
-                            tab += `<tr> 
+                        tab += `<tr> 
                     <td>${count} </td>
                     <td>${r.date_time.slice(0,10)}</td> 
                     <td>${r.date_time.slice(11,19)}</td>
@@ -151,24 +150,23 @@ $(document).ready(function() {
              
               
 </tr>`;
-                            option = {
-                                xAxis: {
-                                    type: 'category',
-                                    data: out.map(item => item.date_time.slice(11, 19))
-                                        // [r.date_time.slice(11, 19)]
-                                },
-                                yAxis: {
-                                    type: 'value'
-                                },
-                                series: [{
-                                    data: out.map(item => item.wind_direction),
-                                    type: 'bar'
-                                }]
-                            };
+                        option = {
+                            xAxis: {
+                                type: 'category',
+                                data: out.map(item => item.date_time.slice(11, 19))
+                                    // [r.date_time.slice(11, 19)]
+                            },
+                            yAxis: {
+                                type: 'value'
+                            },
+                            series: [{
+                                data: out.map(item => item.wind_direction),
+                                type: 'bar'
+                            }]
+                        };
 
-                            if (option && typeof option === 'object') {
-                                __myChart.setOption(option);
-                            }
+                        if (option && typeof option === 'object') {
+                            __myChart.setOption(option);
                         }
                     }
                     // Setting innerHTML as tab variable
@@ -198,8 +196,7 @@ $(document).ready(function() {
                     for (let r of out) {
 
                         count = count + 1;
-                        if (count <= 50) {
-                            tab += `<tr> 
+                        tab += `<tr> 
                     <td>${count} </td>
                     <td>${r.date_time.slice(0,10)}</td> 
                     <td>${r.date_time.slice(11,19)}</td>
@@ -208,24 +205,23 @@ $(document).ready(function() {
              
               
 </tr>`;
-                            option = {
-                                xAxis: {
-                                    type: 'category',
-                                    data: out.map(item => item.date_time.slice(11, 19))
-                                        // [r.date_time.slice(11, 19)]
-                                },
-                                yAxis: {
-                                    type: 'value'
-                                },
-                                series: [{
-                                    data: out.map(item => item.wind_direction),
-                                    type: 'bar'
-                                }]
-                            };
+                        option = {
+                            xAxis: {
+                                type: 'category',
+                                data: out.map(item => item.date_time.slice(11, 19))
+                                    // [r.date_time.slice(11, 19)]
+                            },
+                            yAxis: {
+                                type: 'value'
+                            },
+                            series: [{
+                                data: out.map(item => item.wind_direction),
+                                type: 'bar'
+                            }]
+                        };
 
-                            if (option && typeof option === 'object') {
-                                __myChart.setOption(option);
-                            }
+                        if (option && typeof option === 'object') {
+                            __myChart.setOption(option);
                         }
                     }
                     // Setting innerHTML as tab variable
@@ -255,8 +251,7 @@ $(document).ready(function() {
                     for (let r of out) {
 
                         count = count + 1;
-                        if (count <= 50) {
-                            tab += `<tr> 
+                        tab += `<tr> 
                     <td>${count} </td>
                     <td>${r.date_time.slice(0,10)}</td> 
                     <td>${r.date_time.slice(11,19)}</td>
@@ -265,24 +260,23 @@ $(document).ready(function() {
              
               
 </tr>`;
-                            option = {
-                                xAxis: {
-                                    type: 'category',
-                                    data: out.map(item => item.date_time.slice(11, 19))
-                                        // [r.date_time.slice(11, 19)]
-                                },
-                                yAxis: {
-                                    type: 'value'
-                                },
-                                series: [{
-                                    data: out.map(item => item.wind_direction),
-                                    type: 'bar'
-                                }]
-                            };
+                        option = {
+                            xAxis: {
+                                type: 'category',
+                                data: out.map(item => item.date_time.slice(11, 19))
+                                    // [r.date_time.slice(11, 19)]
+                            },
+                            yAxis: {
+                                type: 'value'
+                            },
+                            series: [{
+                                data: out.map(item => item.wind_direction),
+                                type: 'bar'
+                            }]
+                        };
 
-                            if (option && typeof option === 'object') {
-                                __myChart.setOption(option);
-                            }
+                        if (option && typeof option === 'object') {
+                            __myChart.setOption(option);
                         }
                     }
                     // Setting innerHTML as tab variable
@@ -312,8 +306,7 @@ $(document).ready(function() {
                     for (let r of out) {
 
                         count = count + 1;
-                        if (count <= 50) {
-                            tab += `<tr> 
+                        tab += `<tr> 
                     <td>${count} </td>
                     <td>${r.date_time.slice(0,10)}</td> 
                     <td>${r.date_time.slice(11,19)}</td>
@@ -322,24 +315,23 @@ $(document).ready(function() {
              
               
 </tr>`;
-                            option = {
-                                xAxis: {
-                                    type: 'category',
-                                    data: out.map(item => item.date_time.slice(11, 19))
-                                        // [r.date_time.slice(11, 19)]
-                                },
-                                yAxis: {
-                                    type: 'value'
-                                },
-                                series: [{
-                                    data: out.map(item => item.wind_direction),
-                                    type: 'bar'
-                                }]
-                            };
+                        option = {
+                            xAxis: {
+                                type: 'category',
+                                data: out.map(item => item.date_time.slice(11, 19))
+                                    // [r.date_time.slice(11, 19)]
+                            },
+                            yAxis: {
+                                type: 'value'
+                            },
+                            series: [{
+                                data: out.map(item => item.wind_direction),
+                                type: 'bar'
+                            }]
+                        };
 
-                            if (option && typeof option === 'object') {
-                                __myChart.setOption(option);
-                            }
+                        if (option && typeof option === 'object') {
+                            __myChart.setOption(option);
                         }
                     }
                     // Setting innerHTML as tab variable
@@ -369,8 +361,7 @@ $(document).ready(function() {
                     for (let r of out) {
 
                         count = count + 1;
-                        if (count <= 50) {
-                            tab += `<tr> 
+                        tab += `<tr> 
                     <td>${count} </td>
                     <td>${r.date_time.slice(0,10)}</td> 
                     <td>${r.date_time.slice(11,19)}</td>
@@ -379,24 +370,23 @@ $(document).ready(function() {
              
               
 </tr>`;
-                            option = {
-                                xAxis: {
-                                    type: 'category',
-                                    data: out.map(item => item.date_time.slice(11, 19))
-                                        // [r.date_time.slice(11, 19)]
-                                },
-                                yAxis: {
-                                    type: 'value'
-                                },
-                                series: [{
-                                    data: out.map(item => item.wind_direction),
-                                    type: 'bar'
-                                }]
-                            };
+                        option = {
+                            xAxis: {
+                                type: 'category',
+                                data: out.map(item => item.date_time.slice(11, 19))
+                                    // [r.date_time.slice(11, 19)]
+                            },
+                            yAxis: {
+                                type: 'value'
+                            },
+                            series: [{
+                                data: out.map(item => item.wind_direction),
+                                type: 'bar'
+                            }]
+                        };
 
-                            if (option && typeof option === 'object') {
-                                __myChart.setOption(option);
-                            }
+                        if (option && typeof option === 'object') {
+                            __myChart.setOption(option);
                         }
                     }
                     // Setting innerHTML as tab variable
